@@ -1,23 +1,23 @@
-from flask import Flask, render_template, jsonify
+from flask import Flask, render_template, jsonify, url_for
 # create a constant list of JOBS
 JOBS = [
   {
     'id': 1,
     'title': 'Data Analyst',
     'location': 'Bengaluru, India',
-    'salary': 'ksh 220,000',
+    'salary': 'ksh 230,000',
   },
   {
     'id': 2,
     'title': 'Data Engineer',
     'location': 'Nairobi,Kenya',
-    'salary': 'ksh 230000',
+    'salary': 'ksh 330000',
   },
   {
     'id': 3,
     'title': 'Data Manager',
     'location': 'Kampala, Uganda',
-    'salary': 'ksh 120,000',
+    'salary': 'ksh 360,000',
   },
   {
     'id': 4,

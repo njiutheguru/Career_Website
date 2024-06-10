@@ -14,13 +14,20 @@
     }
   </style>
   <body>
+    {% include 'nav.html' %}
     <div class="container">
     <h1 class="text-center mt-2 mb-2">CML Career</h1>
     <img class="img-fluid" id="banner" src="/static/images/ba.jpg">
-    <h2 class="text-center mt-2 mb-2">About CML</h2>
+    <h2 class="text-center mt-5 mb-3">About CML</h2>
+    <div class="row">
+      <div class="col-md-6">
     <p>
-
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam efficitur nisi tellus, aliquam pellentesque urna porttitor ac. Integer laoreet pretium lorem, at ullamcorper tortor tincidunt vitae. Sed vehicula nulla bibendum, malesuada orci nec, auctor est. Morbi orci nisi, tempus non blandit eget, hendrerit et odio. Nunc feugiat maximus congue. In cursus ut sapien non vulputate. Etiam venenatis, orci eget dapibus consectetur, est sem iaculis elit, ut scelerisque ligula turpis eget lectus. Donec eu leo nisi. Praesent egestas tempus elit at gravida. Sed lobortis non sapien placerat malesuada. Suspendisse potenti. Aliquam venenatis erat libero, id vestibulum ligula mollis eu. Suspendisse id est at leo congue dapibus eget vitae justo. Ut at ipsum iaculis, sollicitudin sem et, ornare eros. Cras tempus velit quis tellus vulputate lobortis. Morbi sed elit ac massa tincidunt egestas a et ex. </p>
+      </div>
+      <div class = "d-none d-md-block col-md-6">
+        <img src="/static/images/work.jpg" style="height:320px; border-radius:4px; width: 100%; object-fit: cover;">
+      </div>
+    </div>
 
     <h2 class="text-center mt-2 mb-2">Open Jobs</h2>
       <div>
@@ -28,10 +35,12 @@
           {% include 'jobs.html' %}
         {% endfor %}
       </div>
-      <div class='text-center'>
-        <button class="btn btn-primary mt-5" >Contact Us</button>
-        <p class="mt-3 fs-12 fst-italic">Copyright® 2024, CML</p>
+      
+        <div class='text-center'>
       </div>
+    </div>
+    <div class='text-center mt-2 mb-2'>
+    {% include 'footer2.html' %}
     </div>
   </body>
 </html>
