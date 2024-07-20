@@ -1,59 +1,38 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title> First Career Website</title>
-    <style>
-      h1 {font-size: 40px;
-          font-family: Roboto;
-          font-weight: normal;
-          color: rgb(100, 100, 100);
-          text-align: center;
-         }
-    
-    #banner {width: 100%;
-             height: 360px;
-             object-fit: cover;
-             }
-      </style>
-    <style>
-      h2 {
-        font-family: Roboto;
-        font-size: 32px;
-        color: rgb(100)100, 100);
-        text-align: center;
-        font-weight: normal;
-      }
-
-      p {
-        font-family: Roboto;
-        color: rgb(80, 80, 80);
-      }
-      .bodytext {
-        font-family: Roboto;
-        color: rgb(80,80,100);
-      }
-
-      #container {
-        max-width: 820px;
-        margin: 0 auto;
-      }
-    </style>
+    <title>CML Ecosystem</title>
+    {% include 'bootstrap.html' %}
   </head>
   <body>
-    <div id= 'container'>
-    <h1>CML Career</h1>
-    <img id="banner" src="https://dbfa8dc9-a3fc-4e24-89de-a0ea0e5fc5d3-00-a3533umc95xc.spock.replit.dev/static/ba.jpg">
-    <h2>About CML</h2>
-    <p class='bodytext'>
+    {% include 'nav.html' %}
+    {% include 'banner.html' %}
+    <div class="container">
+      <h1 class="text-center mt-2 mb-4">
+        CML Ecosystem
+      </h1>
+      <div class="row" style="margin-bottom:32px">
+        <div class="col-md-6">
+      <p class="lead">
+        Welcome to Comrade Learn, where your journey to mastering real-world tech skills begins. Our platform is dedicated to fostering tech expertise through curated local and international sessions, unique opportunities, and Premium Courses.
 
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam efficitur nisi tellus, aliquam pellentesque urna porttitor ac. Integer laoreet pretium lorem, at ullamcorper tortor tincidunt vitae. Sed vehicula nulla bibendum, malesuada orci nec, auctor est. Morbi orci nisi, tempus non blandit eget, hendrerit et odio. Nunc feugiat maximus congue. In cursus ut sapien non vulputate. Etiam venenatis, orci eget dapibus consectetur, est sem iaculis elit, ut scelerisque ligula turpis eget lectus. Donec eu leo nisi. Praesent egestas tempus elit at gravida. Sed lobortis non sapien placerat malesuada. Suspendisse potenti. Aliquam venenatis erat libero, id vestibulum ligula mollis eu. Suspendisse id est at leo congue dapibus eget vitae justo. Ut at ipsum iaculis, sollicitudin sem et, ornare eros. Cras tempus velit quis tellus vulputate lobortis. Morbi sed elit ac massa tincidunt egestas a et ex. </p>
-
-    <h2>Open Jobs</h2>
-      <p class='bodytext'> TODO - Show the jobs here ..</p>
-      <div style="text-align:center;">
-        <button>Contact Us</button>
-        <p>Copyright 2024, CML</p>
+        At Comrade Learn, our primary goal is to help you gain practical skills and build a robust professional network. We provide an ecosystem that not only equips you with cutting-edge knowledge but also offers exclusive job opportunities. This allows you to apply your newly acquired skills in real-world scenarios and earn income while doing so.
+      </p>
+        </div>
+        <div class="d-none d-md-block col-md-6">
+        <img src="/static/images/work.jpg" style="height:320px;border-radius:4px;">
+        </div>
+      </div>
+      <h2 class="text-center mt-2 mb-4">Open Positions</h2>
+      <div>
+        {% for job in jobs %}
+          {% include 'jobitem.html' %}
+        {% endfor %}
+      </div>
+      <div class="text-center">
+      <a class="btn btn-primary btn-lg" href="mailto:hello@jovian.ai?subject=Question%20about%20Job%20Opernings&body=My%20name%3A%20%3Cyour%20name%20here%3E%0D%0A%0D%0AMy%20questions%3A%20%3Center%20question%20here%3E%0D%0A">Contact Us</a>
       </div>
     </div>
+    {% include 'footer.html' %}
   </body>
 </html>
